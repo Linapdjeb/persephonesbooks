@@ -1,0 +1,50 @@
+{% extends "layout.html" %}
+
+{% block title %}Quotes{% endblock %}
+
+{% block head %}
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <!-- <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Hind|Yrsa'> -->
+    <link href="static/quotes.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+
+    <div class="container">
+
+        <h1 class="mt-4 mb-3">
+            Random Famous Quotes
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                {% if session.user_id %}
+                    <a href="/home">Home</a>
+                {% else %}
+                    <a href="/">Home</a>
+                {% endif %}
+            </li >
+            <li class="breadcrumb-item active">Random Famous Quotes</li>
+        </ol>
+        <br><hr><br>
+        
+        {% for i in range(20) %}
+        <!-- Post Content Column -->
+        <div class="row">
+            <div class="lead">
+                <section class="effect effect-c">
+                    <h1 class="effect__heading">“{{ quotes[i]['content'] }}” </h1>
+                    <h2 class="effect__subheading">{{ quotes[i]['author'] }}</h2>
+                </section>
+                
+            </div>
+            
+        </div>
+        <br><hr><br>    
+        {% endfor %}
+        
+
+
+    </div>
+
+{% endblock %}

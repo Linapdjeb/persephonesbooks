@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}Add Blog Post{% endblock %}
+
+{% block main %}
+
+  <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">
+            Add Blog Post
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                {% if session.user_id %}
+                    <a href="/home">Home</a>
+                {% else %}
+                    <a href="/">Home</a>
+                {% endif %}
+            </li>
+            <li class="breadcrumb-item active">Add Blog Post</li>
+        </ol>
+
+        <!-- Intro Content -->
+        <div class="row">
+
+            <div class="row">
+                <div class="col-lg mb-8 addblog">
+                    <h3>Add Your Own Post To Persephone's Books Posts:</h3>
+                    <br>
+                    <form action="/addblog" enctype="multipart/form-data" method="POST">
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Title:</strong></label>
+                                <input type="text" class="form-control" name="title" maxlength="70" id="name" minlength="5" required data-validation-required-message="Please enter your post title." pattern="^[a-zA-Z0-9\w\-\s]+$">
+                                <p class="help-block"></p>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Image:</strong></label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                      <input type="file" name="image" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03" required data-validation-required-message="Please enter an image." accept="image/png, image/gif, image/jpeg, image/jpg">
+                                      <label class="custom-file-label" for="inputGroupFile03">Choose 900x300 Image</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Introduction:</strong></label>
+                                <textarea rows="5" cols="100" name="intro" class="form-control" required data-validation-required-message="Please enter Intro" minlength="50" maxlength="400" style="resize:none"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Main Body:</strong></label>
+                                <textarea rows="17" cols="100" name="mainbody" class="form-control" required data-validation-required-message="Please enter Main Body" minlength="100" maxlength="1360" style="resize:none"></textarea>
+                            </div>
+                        </div>
+                        <div class="control-group form-group">
+                            <div class="controls">
+                                <label><strong>Conclusion:</strong></label>
+                                <textarea rows="5" cols="100" name="conclusion" class="form-control" required data-validation-required-message="Please enter Conclusion" minlength="50" maxlength="400" style="resize:none"></textarea>
+                            </div>
+                        </div>
+                        <div id="success"></div>
+                        <!-- For success/fail messages -->
+                        <button type="submit" class="btn btn-lg">Publish</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

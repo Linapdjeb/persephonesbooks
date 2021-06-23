@@ -1,0 +1,251 @@
+{% extends "layout.html" %}
+
+{% block title %}The Top 10 Greatest Books Of All Time{% endblock %}
+
+{% block main %}
+<div class="container">
+
+    <h1 class="mt-4 mb-3">
+        The Top 10 Greatest Books Of All Time
+    </h1>
+  
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            {% if session.user_id %}
+                <a href="/home">Home</a>
+            {% else %}
+                <a href="/">Home</a>
+            {% endif %}
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/articles">Articles</a>
+        </li>
+        <li class="breadcrumb-item active">The Top 10 Greatest Books Of All Time</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+            <p class="lead">
+
+                <h4>1. Anna Karenina, by Leo Tolstoy</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/annakarenina.jpg" alt="annakarenina">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Anna Karenina tells of the doomed love affair between the sensuous and rebellious Anna and the dashing officer, 
+                            Count Vronsky. Tragedy unfolds as Anna rejects her passionless marriage and thereby exposes herself to the hypocrisies of society. 
+                            Set against a vast and richly textured canvas of nineteenth-century Russia, the novel's seven major characters create a dynamic imbalance, 
+                            playing out the contrasts of city and country life and all the variations on love and family happiness.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>2. Crime And Punishment, by Fyodor Dostoevsky</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/crimeandpunishment.jpg" alt="Crime And Punishment">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Crime and Punishment focuses on the mental anguish and moral dilemmas of Rodion Raskolnikov, an impoverished ex-student in Saint Petersburg who formulates a plan to kill an unscrupulous pawnbroker for her money. 
+                            Before the killing, Raskolnikov believes that with the money he could liberate himself from poverty and go on to perform great deeds. However, once it is done he finds himself racked with confusion, paranoia, and disgust for his actions. 
+                            His justifications disintegrate completely as he struggles with guilt and horror and confronts the real-world consequences of his deed.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>3. Madame Bovary, by Gustave Flaubert</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/madamebovary.jpg" alt="madamebovary">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Madame Bovary is a novel by Gustave Flaubert. It was published in 1856. 
+                            It is the story of an unhappy middle class French housewife. 
+                            She longs for the kind of romance and glamor that life in the country does not provide. 
+                            After a few unfulfilling adulteries, she kills herself.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>4. Middlematch, by George Eliot</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/middlemarch.jpg" alt="middlemarch">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Middlemarch, A Study of Provincial Life is a novel by the English author Mary Anne Evans, 
+                            who wrote as George Eliot. It first appeared in eight instalments (volumes) in 1871 and 1872. 
+                            Set in Middlemarch, a fictional English Midland town in 1829 to 1832, it follows distinct, 
+                            intersecting stories with many characters.At its center are the beautiful and inquisitive 
+                            Dorothea Brooke and the ambitious young doctor Tertius Lydgate, who both have to abandon their 
+                            idealist views when faced with the reality of daily life.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>5. The Great Gatsby, by Fitzgerald</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/thegreatgatsby.jpg" alt="The Great Gatsby">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. 
+                            Set in the Jazz Age on Long Island, the novel depicts narrator Nick Carraway's 
+                            interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite 
+                            with his former lover, Daisy Buchanan.<br>
+                            Fitzgerald offers up commentary on a variety of themes: justice, power, greed, betrayal, 
+                            the American dream, and so on. Of all the themes, perhaps none is more well developed than 
+                            that of social stratification.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>6. One Hundred Year Of Solitude, by Gabriel García Márquez</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/onehundradyearofsolitude.jpg" alt="One Hundred Year Of Solitude">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            One Hundred Years of Solitude is a landmark 1967 novel by Colombian author Gabriel García Márquez that tells the multi-generational story of the Buendía family,
+                            whose patriarch, José Arcadio Buendía, founded the town of Macondo. The novel is often cited as one of the supreme achievements in literature.
+                            <br>A dominant theme in One Hundred Years of Solitude is the inevitable and inescapable repetition of history in Macondo.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>7. War And Peace, by Leo Tolstoy</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/warandpeace.jpg" alt="War And Peace">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            War and Peace broadly focuses on Napoleon’s invasion of Russia in 1812 and follows three 
+                            of the most well-known characters in literature: Pierre Bezukhov, the illegitimate son of a 
+                            count who is fighting for his inheritance and yearning for spiritual fulfillment; 
+                            Prince Andrei Bolkonsky, who leaves his family behind to fight in the war against Napoleon; 
+                            and Natasha Rostov, the beautiful young daughter of a nobleman who intrigues both men.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>8. Lolita, by Vladimir Nabokov</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/lolita.jpg" alt="Lolita">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The novel was originally written in English and first published in Paris in 1955 by Olympia Press. 
+                            Later it was translated into Russian by Nabokov himself and published in New York City in 1967 by Phaedra Publishers. 
+                            Lolita quickly attained a classic status.<br>
+                            The novel is notable for its controversial subject: the protagonist and unreliable narrator, 
+                            a middle-aged literature professor under the pseudonym Humbert Humbert, is obsessed with a 12-year-old girl, 
+                            Dolores Haze, with whom he becomes sexually involved after he becomes her stepfather
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>9. Hamlet, by William Shakespeare</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/hamlet.jpg" alt="Hamlet">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Tragedy of Hamlet, Prince of Denmark, often shortened to Hamlet, is a tragedy written 
+                            by William Shakespeare sometime between 1599 and 1601. It is Shakespeare's longest play, with 29,551 words.<br>
+                            The ghost of the King of Denmark tells his son Hamlet to avenge his murder by killing the new king, Hamlet's uncle. 
+                            Hamlet feigns madness, contemplates life and death, and seeks revenge. His uncle, fearing for his life, also devises plots to kill Hamlet.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>10. Moby Dick, by Herman Melville</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/classics/mobydick.jpg" alt="Moby Dick">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Moby-Dick; or, The Whale is an 1851 novel by American writer Herman Melville. 
+                            The book is the sailor Ishmael's narrative of the obsessive quest of Ahab, captain of the whaling ship Pequod, 
+                            for revenge on Moby Dick, the giant white sperm whale that on the ship's previous voyage bit off Ahab's leg at the knee.
+                        </p>
+                        <p>
+                            “I know not all that may be coming, but be it what it will, I'll go to it laughing.”
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+            </p>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                          
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

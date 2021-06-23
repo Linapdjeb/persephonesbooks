@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block title %}Books{% endblock %}
+
+{% block main %}
+
+    <style>
+        .bookgenre {
+        margin: 20px;
+        background: #f9f9f9 !important;
+        padding: 15px;
+        height: 50px;
+        }
+        nav .menuItems {
+        list-style: none;
+        display: flex;
+        }
+        nav .menuItems li {
+        margin-right: 20px;
+        margin-left: 20px;
+        }
+        nav .menuItems li a {
+        text-decoration: none;
+        color: #8f8f8f;
+        font-size: 17px;
+        font-weight: 300;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        text-transform: uppercase;
+        }
+        nav .menuItems li a::before {
+        content: attr(data-item);
+        transition: 0.5s;
+        color: #8254ff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        }
+        nav .menuItems li a:hover::before {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        }
+
+    </style>
+
+    <div class="container">
+
+        <h1 class="mt-4 mb-3">
+            Books
+        </h1>
+    
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/">Home</a>
+            </li >
+            <li class="breadcrumb-item active">{{ genre }}</li>
+        </ol>
+        
+        <div class="row">
+
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+                <p class="lead">
+                    {% for i in range(30) %}
+                        {% if "authors" in booklist[i]["volumeInfo"] %}
+                            <h4>• {{ booklist[i]["volumeInfo"]["title"] }}, by {{ booklist[i]["volumeInfo"]["authors"][0] }}</h4><br>
+                        {% else %}
+                            <h4>• {{ booklist[i]["volumeInfo"]["title"] }}</h4><br>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="card mb-4">
+                                    {% if "imageLinks" in booklist[i]["volumeInfo"] %}
+                                        <img src=" {{ booklist[i]["volumeInfo"]["imageLinks"]["thumbnail"] }} " alt="image.jpg">
+                                    {% else %}
+                                        <img src="static/images/placeholder.png" alt="{{ booklist[i]["volumeInfo"]["title"] }}">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                                <p>{{ booklist[i]["volumeInfo"]["subtitle"] }}</p><br>
+                                <p>{{ booklist[i]["volumeInfo"]["description"] }}</p>
+                            </div>
+                        </div>
+                        <br><hr><br>
+                    {% endfor %}
+                </p>
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>    
+
+{% endblock %}

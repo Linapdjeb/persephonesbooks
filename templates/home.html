@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block head %}
+    <link href="static/account.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+    <link href="static/home.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+    
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">Hello {{ name }}!
+        
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"> </li>
+        </ol>
+
+        <div class="row" style="height: 58vh;">
+
+            <h3>Profil Info:</h3><br>
+            <div class="col-lg-4" id="card1">
+                <!-- <div class="card"> -->
+                    <div class="card-body">
+                        <div class="d-flex flex-column align-items-center text-center">
+                            {% if "static/images/users/{{ name }}.png" %}
+                            <img src="static/images/users/{{ name }}.png" alt="{{ name }}" class="rounded-circle p-1 bg-secondary" width="110">
+                            {% else %}
+                            <img src="static/images/avatar.gif" alt="{{ name }}" class="rounded-circle p-1 bg-secondary" width="110">
+                            {% endif %}
+                            <div class="mt-3">
+                                {% if info[0]|length >= 4 %}
+                                    <h4>{{ info[0][0] }}</h4>
+                                    <p class="text-secondary mb-1">{{ name }}<br>{{ info[0][1] }}</p>
+                                    <p class="text-muted font-size-sm">{{ info[0][2] }}</p>
+                                    <p class="text-muted font-size-sm">{{ info[0][3] }}</p>
+                                {% else %}
+                                    <h4>{{ name }}</h4>
+                                    <p class="text-secondary mb-1">Add other info to ur account <a href="/account">Here</a>.</p>
+                                    <!-- <p class="text-muted font-size-sm">Address</p>
+                                    <p class="text-muted font-size-sm">Personal Information</p><br><br><br> -->
+                                {% endif %}
+                                
+                            </div>
+                        </div>
+                    </div>
+                <!-- </div> -->
+            </div>
+            <h3>Notes:</h3><br>
+            {% if notes[0]|length >= 4 %}
+                <a href="/notebook"><div class="sccontainer">
+                    <div class="theshinycard">
+                        <h3 class="title">{{ notes[0][1] }}</h3>
+                        <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                        </div>
+                        <div class="circle">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="stroke" cx="60" cy="60" r="50"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div></a>
+                {% if notes[1] %}
+                <a href="/notebook"><div class="sccontainer">
+                    <div class="theshinycard">
+                        <h3 class="title">{{ notes[1][1] }}</h3>
+                        <div class="bar">
+                        <div class="emptybar"></div>
+                        <div class="filledbar"></div>
+                        </div>
+                        <div class="circle">
+                            <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle class="stroke" cx="60" cy="60" r="50"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div></a>
+                {% endif %}
+                
+            {% else %}
+                <div id="wrapper" style="height: 55vh;">
+                    <div id="idk">
+                        <h4 class="text-center text" id="nonotes">
+                            NO Notes!<br>
+                            <small>Add one <a href="/notebook">Here</a>!</small>
+                        </h4>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+
+
+{% endblock %}

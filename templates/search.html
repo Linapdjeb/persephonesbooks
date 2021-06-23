@@ -1,0 +1,126 @@
+{% extends "layout.html" %}
+
+{% block title %}Books{% endblock %}
+
+{% block main %}
+
+    <style>
+        .bookgenre {
+        margin: 20px;
+        background: #f9f9f9 !important;
+        padding: 15px;
+        height: 50px;
+        }
+        nav .menuItems {
+        list-style: none;
+        display: flex;
+        }
+        nav .menuItems li {
+        margin-right: 20px;
+        margin-left: 20px;
+        }
+        nav .menuItems li a {
+        text-decoration: none;
+        color: #8f8f8f;
+        font-size: 17px;
+        font-weight: 300;
+        transition: all 0.5s ease-in-out;
+        position: relative;
+        text-transform: uppercase;
+        }
+        nav .menuItems li a::before {
+        content: attr(data-item);
+        transition: 0.5s;
+        color: #8254ff;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        overflow: hidden;
+        }
+        nav .menuItems li a:hover::before {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        }
+
+    </style>
+
+    <div class="container">
+
+        <h1 class="mt-4 mb-3">
+            Books
+        </h1>
+    
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                {% if session.user_id %}
+                    <a href="/home">Home</a>
+                {% else %}
+                    <a href="/">Home</a>
+                {% endif %}
+            </li >
+            <li class="breadcrumb-item active">{{ inp }}</li>
+        </ol>
+        
+        <!-- <form method="POST" action="/books">
+            <nav class="bookgenre">
+                <ul class="menuItems">
+                    <li><button type="submit"  name="genre" value="classics" data-item='Classics'>Classics</button></li>
+                    <li><button type="submit"  name="genre" value="fantasy" data-item='Fantasy'>Fantasy</button></li>
+                    <li><button type="submit"  name="genre" value="mystery" data-item='Mystery'>Mystery</button></li>
+                    <li><button type="submit"  name="genre" value="adventure" data-item='Adventure'>Adventure</button></li>
+                    <li><button type="submit"  name="genre" value="horror" data-item='Horror'>Horror</button></li>
+                    <li><button type="submit"  name="genre" value="history" data-item='History'>History</button></li>
+                    <li><button type="submit"  name="genre" value="nonfiction" data-item='Nonfiction'>Nonfiction</button></li>
+                </ul>
+            </nav>
+        </form> -->
+
+        <!-- href="/books/classics" href="/books/fantasy" href="/books/mystery" href="/books/Adventure" href="/books/horror" href="/books/history" href="/books/nonfiction" -->
+
+
+        <div class="row">
+
+            <!-- Post Content Column -->
+            <div class="col-lg-8">
+                <p class="lead">
+                    {% for i in range(10) %}
+                        {% if "authors" in bookinfo[i]["volumeInfo"] %}
+                            <h4>• {{ bookinfo[i]["volumeInfo"]["title"] }}, by {{ bookinfo[i]["volumeInfo"]["authors"][0] }}</h4><br>
+                        {% else %}
+                            <h4>• {{ bookinfo[i]["volumeInfo"]["title"] }}</h4><br>
+                        {% endif %}
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="card mb-4">
+                                    {% if "imageLinks" in bookinfo[i]["volumeInfo"] %}
+                                        <img src=" {{ bookinfo[i]["volumeInfo"]["imageLinks"]["thumbnail"] }} " alt="image.jpg">
+                                    {% else %}
+                                        <img src="static/images/placeholder.png" alt="{{ bookinfo[i]["volumeInfo"]["title"] }}">
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <!-- <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a> -->
+                                <p>{{ bookinfo[i]["volumeInfo"]["subtitle"] }}</p><br>
+                                <p>{{ bookinfo[i]["volumeInfo"]["description"] }}</p>
+                            </div>
+                        </div>
+                        <br><hr><br>
+                    {% endfor %}
+                </p>
+            </div>
+
+            <!-- Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <div class="card mb-4">
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>    
+
+{% endblock %}

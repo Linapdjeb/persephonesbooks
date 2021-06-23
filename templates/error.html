@@ -1,0 +1,97 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ top }}
+{% endblock %}
+
+{% block main %}
+    
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <h1 class="mt-4 mb-3">
+            {{ top }}
+        </h1>
+
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+                {% if session.user_id %}
+                    <a href="/home">Home</a>
+                {% else %}
+                    <a href="/">Home</a>
+                {% endif %}
+            </li>
+            <li class="breadcrumb-item active">{{ top }}</li>
+        </ol>
+        <div style="margin: 50px; margin-left: 200px; margin-right: auto">
+            <img alt="{{ top }}" class="border" src="https://api.memegen.link/images/doge/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?watermark=memecomplete.com">
+        </div>
+        <div class="jumbotron" style="background-color: rgb(255, 239, 241) !important;">
+            <h1 class="display-1">{{ top }}</h1>
+            <p>The page you're looking for could not be found. Here are some helpful links to get you back on track:</p>
+            <ul>
+                <li>
+                    {% if session.user_id %}
+                        <a href="/home">Home</a>
+                    {% else %}
+                        <a href="/">Home</a>
+                    {% endif %}
+                </li>
+                <li>
+                    <a href="/readability">Readability</a>
+                </li>
+                
+                <li>
+                    <a href="/articles">Articles</a>
+                    <ul>
+                        <li><a href="/article1">Article One</a></li>
+                        <li><a href="/article2">Article Two</a></li>
+                        <li><a href="/article3">Article Three</a></li>
+                        <li><a href="/article4">Article Four</a></li>
+                        <li><a href="/article5">Article Five</a></li>
+                        <li><a href="/article6">Article Six</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="/blogposts">Blog Posts</a>
+                </li>
+                <li>
+                    <a href="/quotes">Quotes</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                {% if session.user_id %}
+                    <li>
+                        <a href="/account">Account</a>
+                    </li>
+                    <li>
+                        <a href="/myposts">Myposts</a>
+                    </li>
+                    <li>
+                        <a href="/notebook">Notebook</a>
+                    </li>
+                    <li>
+                        <a href="/addblog">Add Blogpost</a>
+                    </li>
+                {% else %}
+                    <li>
+                        <a href="/login">Login</a>
+                    </li>
+                    <li>
+                        <a href="/register">Register</a>
+                    </li>   
+                {% endif %}
+            </ul>
+        </div>
+        <!-- /.jumbotron -->
+  </div>
+  <!-- /.container -->
+
+{% endblock %}
+
+
+
+<!-- http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://i.imgur.com/CsCgN7Ll.png" title="{{ top }} -->

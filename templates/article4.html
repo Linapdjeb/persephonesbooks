@@ -1,0 +1,272 @@
+{% extends "layout.html" %}
+
+{% block title %}The Best Self-Improvement Books{% endblock %}
+
+{% block main %}
+<div class="container">
+
+    <h1 class="mt-4 mb-3">
+        The Best Self-Improvement Books
+    </h1>
+  
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            {% if session.user_id %}
+                <a href="/home">Home</a>
+            {% else %}
+                <a href="/">Home</a>
+            {% endif %}
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/articles">Articles</a>
+        </li>
+        <li class="breadcrumb-item active">The Best Self-Improvement Books</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+            <p class="lead">
+
+                <h4>1. The 7 Habits of Highly Effective People, by Stephen Covey</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/7habits.jpg" alt="The 7 Habits">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The 7 Habits of Highly Effective People, first published in 1989, is a business and self-help book written by Stephen R. Covey.
+                        </p>
+                        <ul>The 7 habits are:
+                            <li>Habit 1: Be Proactive Focus and act on what you can control and influence, instead of what you can't</li>
+                            <li>Habit 2: Begin With the End in Mind</li>
+                            <li>Habit 3: Put First Things First</li>
+                            <li>Habit 4: Think Win-Win</li>
+                            <li>Habit 5: Seek First to Understand, Then to Be Understood</li>
+                            <li>Habit 6: Synergize</li>
+                            <li>Habit 7: Sharpen the Saw</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>2. Atomic Habits, by James Clear</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/atomichabits.jpg" alt="Atomic Habits">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones.
+                        </p>
+                        <p>
+                            Atomic Habits will reshape the way you think about progress and success, 
+                            and give you the tools and strategies you need to transform your habits, 
+                            whether you are a team looking to win a championship, an organization hoping to redefine an industry, 
+                            or simply an individual who wishes to quit smoking, lose weight, reduce stress, or achieve any other goal.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>3. Big Magic, by Elizabeth Gilbert</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/bigmagic.jpg" alt="Big Magic">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Big Magic: Creative Living Beyond Fear. NEW YORK TIMES Bestseller.
+                        </p>
+                        <p>
+                            Balancing between soulful spirituality and cheerful pragmatism, 
+                            Gilbert encourages us to uncover the “strange jewels” that are hidden within each of us. 
+                            Whether we are looking to write a book, make art, find new ways to address challenges in our work,  
+                            embark on a dream long deferred, or simply infuse our everyday lives with more mindfulness and passion, 
+                            Big Magic cracks open a world of wonder and joy.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>4. How To Win Friends And Influence People, by Dale Carnegie</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/howtowinfriends.jpg" alt="How To Win Friends">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Dale Carnegie’s rock-solid, time-tested advice has carried countless people up the ladder of success in their business and personal lives. 
+                            One of the most groundbreaking and timeless bestsellers of all time, How to Win Friends & Influence People will teach you:
+                        </p>
+                        <ul>
+                            <li>Six ways to make people like you</li>
+                            <li>Twelve ways to win people to your way of thinking</li>
+                            <li>Nine ways to change people without arousing resentment</li>
+                        </ul>   
+                        <p>
+                            And much more! Achieve your maximum potential—a must-read for the twenty-first century with more than 15 million copies sold!
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>5. The 48 Laws of Power, by Robert Greene</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/power.jpg" alt="Power">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            In the book that People magazine proclaimed “beguiling” and “fascinating,” 
+                            Robert Greene and Joost Elffers have distilled three thousand years of the history of power into 
+                            48 essential laws by drawing from the philosophies of Machiavelli, Sun Tzu, and Carl Von Clausewitz 
+                            and also from the lives of figures ranging from Henry Kissinger to P.T. Barnum.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>6. The Power Of Now, by Eckhart Tolle</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/thepowerofnow.jpg" alt="The Power Of Now">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Much more than simple principles and platitudes, the book takes readers on 
+                            an inspiring spiritual journey to find their true and deepest self and reach 
+                            the ultimate in personal growth and spirituality: the discovery of truth and light.
+                        </p>
+                        <p>
+                            Featuring a new preface by the author, this paperback shows that only after regaining awareness of Being, 
+                            liberated from Mind and intensely in the Now, is there Enlightenment.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>7. The Four Agreement, by Don Miguel Ruiz</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/thefouragreement.jpg" alt="The Four Agreement">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book)
+                        </p>
+                        <p>
+                            In The New York Times bestseller Four Agreements, bestselling author don Miguel Ruiz reveals 
+                            the source of self-limiting beliefs that rob us of joy and create needless suffering. 
+                            Based on ancient Toltec wisdom, The Four Agreements offer a powerful code of conduct that can rapidly 
+                            transform our lives to a new experience of freedom, true happiness, and love.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>8. The Subtle Art Of Not Giving A Fuck, by Mark Manson</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/thesubtleart.jpg" alt="The Subtle Art">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Subtle Art of Not Giving a F*ck: A Counterintuitive Approach to Living a Good Life
+                            is the second book by blogger and author Mark Manson. In it Manson argues that life's struggles give it meaning, 
+                            and that the mindless positivity of typical self-help books is neither practical nor helpful.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>9. Think And Grow Rich, by Napoleon Hill</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/thinkandgrowrich.jpg" alt="Think And Grow Rich">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Think and Grow Rich was written by Napoleon Hill in 1937 and promoted as a personal development and self-improvement book.
+                            He claimed to be inspired by a suggestion from business magnate and later-philanthropist Andrew Carnegie.
+                        </p>
+                        <p>
+                            Thirteen Principles of Think and Grow Rich:<br>
+                            Faith, Self Suggestion, Knowledge, Imagination, Planning, Decision, Persistence, Mastermind, 
+                            Transmutation, Subconscious Mind, The Brain, and Sixth Sense.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>10. You Are A Badass, by Jen Sincero</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/selfhelp/youareabadass.jpg" alt="You Are A Badass">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Packed with humor, inspiration, and advice, You Are a Badass: How to Stop Doubting Your Greatness and Start Living an Awesome Life
+                            is the number one New York Times best-selling self-help book that teaches you how to get better without getting busted.
+                        </p>
+                        <ul>It will help you:
+                            <li>Identify and change the self-sabotaging beliefs and behaviors that stop you from getting what you want,</li>
+                            <li>Create a life you totally love. And create it NOW, and</li>
+                            <li>Make some damn money already. The kind you've never made before.</li>
+                        </ul>
+                    </div>
+                </div>
+                <br><hr><br>
+            </p>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

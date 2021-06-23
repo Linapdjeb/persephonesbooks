@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block title %}Readability{% endblock %}
+
+{% block head %}
+    <link href="static/readability.css" rel="stylesheet">
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">
+        Readability
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        {% if session.user_id %}
+            <a href="/home">Home</a>
+        {% else %}
+            <a href="/">Home</a>
+        {% endif %}
+      </li>
+      <li class="breadcrumb-item active">Readability</li>
+    </ol>
+
+    <div class="wrapper">
+        <h4>
+            Readability refers to how easy it is to read and understand a text, 
+            depending on its unique features. This can be measured using metrics 
+            such as the number of syllables in a sentence or variety of words used 
+            to calculate a 'level' and/or a readability score.
+        </h4>
+        <div class="row">
+            <div class="col-md-4">
+                <form class="readability" action="/readability" method="post">
+                    <p>
+                        This program computes the approximate grade level needed to comprehend the text you put down below:
+                    </p>
+                    <div class="group">
+                        <textarea type="textarea" rows="5" required="required" name="textarea" minlength="50">{{ text }}</textarea><span class="highlight"></span><span class="bar"></span>
+                        <label>Text</label>
+                    </div>
+                    <div class="btn-box buttons">
+                        <button class="rdbutton effect04" type="submit" data-sm-link-text="Submit" name="button" value="submit"><span>Submit</span></button>
+                    </div>
+                </form>
+            </div>
+            <br><br>
+            <div class="col-md-4">
+                <div class="result">
+                    {% if display == True %}
+                        <h5>Result:</h5>
+                        <ul>
+                            <li>{{ letters }} Letter.</li>
+                            <li>{{ words }} Words.</li>
+                            <li>{{ sentences }} Sentences.</li>
+                            <li>{{ txtgrade }}.</li>
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        <!-- /row -->
+
+    </div>
+</div>
+{% endblock %}

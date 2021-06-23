@@ -1,0 +1,246 @@
+{% extends "layout.html" %}
+
+{% block title %}The Must-Reads YA of All Time{% endblock %}
+
+{% block main %}
+<div class="container">
+
+    <h1 class="mt-4 mb-3">
+        The Must-Reads YA of All Time
+    </h1>
+  
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            {% if session.user_id %}
+                <a href="/home">Home</a>
+            {% else %}
+                <a href="/">Home</a>
+            {% endif %}
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/articles">Articles</a>
+        </li>
+        <li class="breadcrumb-item active">The Must-Reads YA of All Time</li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+            <p class="lead">
+                
+                <h4>1. The Perks Of Being A Wallflower, by Stephen Chbosky</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/theperksofbeing.jpg" alt="The Perks Of Being A Wallflower">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Perks of Being a Wallflower is a young adult coming-of-age epistolary novel by 
+                            American writer Stephen Chbosky, which was first published on February 1, 1999, by Pocket Books.
+                        </p>
+                        <p>
+                            Fifteen-year-old Charlie is coping with the suicide of his friend, Michael. 
+                            To lessen the fear and anxiety of starting high school alone, Charlie starts writing letters to 
+                            a stranger, someone he heard was nice but has never met in person.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>2. The Book Thief, by Markus Zusak</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/thebookthief.jpg" alt="The Book Thief">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Book Thief is a historical novel by Australian author Markus Zusak, and is his most popular work.
+                            It tells the story of Liesel, a little girl who is taken to a new home because her mother can't afford to take care of her. 
+                            The story is told by Death, who becomes a character you come to respect and even feel sorry for by the end.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>3. The Fault in Our Stars, by John Green</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/thefault.jpg" alt="The Fault in our Stars">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Fault In Our Stars is a fabulous book about a young teenage girl who has 
+                            been diagnosed with lung cancer and attends a cancer support group.
+                            Hazel and Augustus embark on a roller coaster ride of emotions, including love, sadness and romance, 
+                            while searching for the author of their favourite book.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>4. The Catcher In The Rye, by J. D. Salinger</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/thecatcher.jpg" alt="The Catcher In The Rye">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The novel details two days in the life of 16-year-old Holden Caulfield after 
+                            he has been expelled from prep school. Confused and disillusioned, Holden searches 
+                            for truth and rails against the “phoniness” of the adult world. He ends up exhausted and 
+                            emotionally unstable.
+                            <br>
+                            <small>One of my all time favorite.</small>
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>5. The Hate U Give, by Angie Thomas</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/thehateugive.jpg" alt="The Hate U Give">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Hate U Give is Angie Thomas's first novel about a teenage girl who grapples with racism, 
+                            police brutality, and activism after witnessing her black friend murdered by the police. 
+                            The book became an immediate young adult bestseller and was adapted into a movie shortly 
+                            after its release.<br>
+                            It is Thomas's debut novel, expanded from a short story she wrote in college in reaction to the police shooting of Oscar Grant.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>6. One Of Us Is Lying, by Karen M. McManus</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/oneofus.jpg" alt="One Of Us Is Lying">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            One of Us is Lying is a young adult, mystery/suspense novel by American author Karen M. McManus.
+                            It follows the gripping story of Bronwyn, Addy, Nate, and Cooper 
+                            as suspects in the murder of Simon Kelleher. Each of the high school students have secrets 
+                            that they would do anything to protect, so how far would they go to make sure they're kept 
+                            out of the spotlight?
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>7. The Outsiders, by S. E. Hinton</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/theoutsiders.jpg" alt="The Outsiders">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            The Outsiders is a coming-of-age novel by S. E. Hinton, first published in 1967 by Viking Press.
+                            The novel tells the story of Ponyboy Curtis and his struggles with right and wrong in a society in which he believes that he is an outsider. Ponyboy and his two brothers — Darrel (Darry), who is 20, and Sodapop, who is 16 — have recently lost their parents in an automobile accident.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>8. Aristotle And Dante Discover The secrets Of The Universe, by Benjamin Alire Sáenz</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/aristotleanddante.jpg" alt="Aristotle And Dante">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Aristotle and Dante Discover the Secrets of the Universe is a coming-of-age young adult
+                            lyrical novel about family and friendship from critically acclaimed author Benjamin Alire Sáenz. 
+                            <br>Aristotle is an angry teen with a brother in prison. Dante is a know-it-all who has an unusual way of looking at the world. 
+                            When the two meet at the swimming pool, they seem to have nothing in common.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>9. All The Bright Places, by </h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/allthebright.jpg" alt="All The Bright Places">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            After meeting each other, two people struggle with the emotional and physical scars of their past. They discover that even the smallest moments can mean something.<br>
+                            All the Bright Places is a compelling and beautiful story about a girl who learns to live from a boy who intends to die. 
+                            Theodore Finch is fascinated by death, and he constantly thinks of ways he might kill himself. 
+                            But each time, something good, no matter how small, stops him.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>10. The Conference of the Birds (Miss Peregrine's Peculiar Children), by Ransom Riggs</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/YAs/missperegrine.jpg" alt="Miss Peregrine">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            With enemies behind him and the unknown ahead, Jacob Portman’s story continues as he takes a brave leap forward into The Conference of the Birds, the fifth novel in the bestselling Miss Peregrine’s Peculiar Children series by Ransom Riggs.<br>
+                            The Conference of the Birds continues the series Miss Peregrine's Peculiar Children, 
+                            as Jacob Portman tries to follow through on a mission given to him by his dying grandfather. 
+                            He must help fulfill a prophecy, or certain doom will befall both the normal and peculiar worlds.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+            </p>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

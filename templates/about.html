@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}About{% endblock %}
+
+{% block main %}
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Page Heading/Breadcrumbs -->
+    <h1 class="mt-4 mb-3">
+      About
+    </h1>
+
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item">
+        {% if session.user_id %}
+          <a href="/home">Home</a>
+        {% else %}
+          <a href="/">Home</a>
+        {% endif %}
+      </li>
+      <li class="breadcrumb-item active">About</li>
+    </ol>
+
+    <!-- Intro Content -->
+    <div class="row">
+      <div class="col-lg-6">
+        <iframe class="img-fluid rounded mb-4" width="750" height="450"
+          src="https://www.youtube.com/watch?v=bQ3k3Q2C8VE">
+        </iframe>
+      </div>
+      <div class="col-lg-6">
+        <h2>About leeBook</h2>
+        <p>I created this Website from my Final Project in <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" target="_blank" style="color:gray">CS50: introduction to computer science.</a></p>
+      </div>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+{% endblock %}

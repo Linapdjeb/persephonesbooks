@@ -1,0 +1,242 @@
+{% extends "layout.html" %}
+
+{% block title %}The 10 Best Non-Fiction Books in 2021{% endblock %}
+
+{% block main %}
+<div class="container">
+
+    <h1 class="mt-4 mb-3">
+        The 10 Best Non-Fiction Books in 2021 
+    </h1>
+  
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            {% if session.user_id %}
+                <a href="/home">Home</a>
+            {% else %}
+                <a href="/">Home</a>
+            {% endif %}
+        </li>
+        <li class="breadcrumb-item">
+            <a href="/articles">Articles</a>
+        </li>
+        <li class="breadcrumb-item active">The 10 Best Non-Fiction Books in 2021 </li>
+    </ol>
+
+    <div class="row">
+
+        <!-- Post Content Column -->
+        <div class="col-lg-8">
+            <p class="lead">
+
+                <h4>1. Let Me Tell You What I Mean, by Joan Didion</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/letmetellyou.jpg" alt="Let Me Tell You">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            New York Times Best Seller!<br>
+                            A Most Anticipated Book of 2021 from Vogue, TIME, Bustle, The New York Times and many more.
+                            From one of our most iconic and influential writers: a timeless collection of mostly early pieces 
+                            that reveal what would become Joan Didion’s subjects, including the press, politics, California 
+                            robber barons, women, and her own self-doubt.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>2. How To Avoid Climate Disaster, by Bill Gates</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/howtoavoidclimate.jpg" alt="How To Avoid Climate">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            How to Avoid a Climate Disaster: The Solutions We Have and the Breakthroughs We Need is a 2021 book 
+                            by Bill Gates. In it, Gates presents what he learned in over a decade of studying climate change and 
+                            investing in innovations to address global warming and recommends strategies to tackle it.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>3. AfterShocks, by Nadia Owusu</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/aftershocks.jpg" alt="AfterShocks">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            'Aftershocks' Is A Powerful Memoir Of A Life Upended — Then Pieced Back Together. 
+                            When Nadia Owusu was 7 years old and living in Rome with her father, stepmother and younger sister, 
+                            two events occurred on the same day that upended her world.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>4. Four Hundred Souls, by Ibram X. Kendi, Keisha N. Blain</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/fourhundredsouls.jpg" alt="Four Hundred Souls">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            NEW YORK TIMES BESTSELLER!<br>
+                            Four Hundred Souls is an epoch-defining history of African America, the first to appear in a generation, 
+                            told by ninety leading Black voices, co-curated by Ibram X. Kendi, author of the million-copy bestseller 
+                            How To Be an Antiracist, and Keisha N. Blain, author of Set the World on Fire.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>5. Surviving The White Gaze, by Rebecca Carroll</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/survivingthewhitegaze.jpg" alt="Surviving The White Gaze">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            A stirring and powerful memoir from black cultural critic Rebecca Carroll recounting 
+                            her painful struggle to overcome a completely white childhood in order to forge her identity 
+                            as a black woman in America.<br>
+                            Intimate and illuminating, Surviving the White Gaze is a timely examination of racism and racial 
+                            identity in America today, and an extraordinarily moving portrait of resilience.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>6. The Beauty Of Living Twice, by Sharon Stone</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/thebeautyoflivingtwice.jpg" alt="The Beauty Of Living Twice">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Sharon Stone tells her own story: a journey of healing, love and purpose. 
+                            She was one of the most renowned actresses in the world-until a massive stroke cost 
+                            her not only her health, but her career, family, fortune and global fame.<br>
+                            The Beauty of Living Twice is a book for the wounded and a book for the survivors; 
+                            it’s a celebration of women’s strength and resilience, a reckoning, and a call to activism. It is proof that it’s never too late to raise your voice and speak out.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>7. The Hard Crowd, by Rachel Kushner</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/thehardcrowd.jpg" alt="The Hard Crowd">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Kushner takes us on a journey through a Palestinian refugee camp, 
+                            an illegal motorcycle race down the Baja Peninsula, 1970s wildcat strikes in Fiat 
+                            factories, her love of classic cars, and her young life in the music scene of her hometown, 
+                            San Francisco.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>8. A Swim In A Pond In The Rain, by George Saunders</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/aswim.jpg" alt="A Swim">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            NEW YORK TIMES BESTSELLER!<br>
+                            A Swim in a Pond in the Rain is a deep exploration not just of how great writing 
+                            works but of how the mind itself works while reading, and of how the reading and writing 
+                            of stories make genuine connection possible.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>9. Under A White Sky, by Elizabeth Kolbert</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/underawhitesky.jpg" alt="Under A White Sky">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            'Under A White Sky' Examines What It Might Take For Humans To Continue To Exist 
+                            Elizabeth Kolbert makes clear how far we already are from a world of undisturbed, 
+                            balanced nature — and how far we must go to find a new balance for the planet's future, 
+                            one that still includes us.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+
+                <h4>10. Crying In H Mart, by Michelle Zauner</h4><br>
+                <div class="row">
+                    
+                    <div class="col-md-5">
+                        <div class="card mb-4">
+                            <img src="static/images/books/nf21/cryinginhmart.jpg" alt="Crying In The H Mart">
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <a href="/" target="_blank" class="but"><div class="button">Shop Now!</div></a>
+                        <p>
+                            Vivacious and plainspoken, lyrical and honest, Zauner’s voice is as radiantly alive 
+                            on the page as it is onstage. Rich with intimate anecdotes that will resonate widely, 
+                            and complete with family photos, Crying in H Mart is a book to cherish, share, and reread.
+                        </p>
+                    </div>
+                </div>
+                <br><hr><br>
+            </p>
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                WYLAN VAN SUNSHINE !!
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

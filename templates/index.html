@@ -1,0 +1,193 @@
+{% extends "layout.html" %}
+
+{% block title %}Persephone's Books{% endblock %}
+
+{% block main %}
+  <header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('static/images/book1.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>“A room without books is like a body without a soul.”</h3>
+            <p>― Marcus Tullius Cicero</p>
+          </div>
+        </div>
+        <!-- Slide Two - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('static/images/book2.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>“The library is inhabited by spirits that come out of the pages at night.”</h3>
+            <p>– Isabel Allende</p>
+          </div>
+        </div>
+        <!-- Slide Three - Set the background image for this slide in the line below -->
+        <div class="carousel-item" style="background-image: url('static/images/book3.jpg')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3>“There is no friend as loyal as a book.”</h3>
+            <p>― Ernest Hemingway</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <h1 class="my-4">Welcome to Persephone's Books</h1>
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          
+          <img class="card-img-top" src="static/images/firstcover.png" alt="The best YA fantasy books in 2021">
+          
+          <div class="card-body">
+            <h4 class="card-title">
+              The Best YA Fantasy Books In 2021
+            </h4>
+            <p class="card-text">Here are some of the most Anticipated YA Fantasy Books In 2021:
+              <ul>
+                <li>Witches steeped in gold, by Ciannon Smart.</li>
+                <li>Wings of ebony, by J. Elle.</li>
+                <li>We free the stars, by Hafsah Faizal...</li>
+              </ul>
+            </p>
+            <a href="/article1" class="btn" name="readMore" value="article1">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/images/secondcover.png" alt="The best Novels To Read In 2021">
+          <div class="card-body">
+            <h4 class="card-title">
+              The best Novels To Read In 2021
+            </h4>
+            <p class="card-text">
+              What should you read next ? Check out some of best novels 2021 has to offer so far:
+              <ul>
+                <li>A Crooked Tree, Una Mannion.</li>
+                <li>The Removed, Brandon Hobson.</li>
+                <li>This Close To Okay, Leesa Cross-smith...</li>
+              </ul>
+            </p>
+            <a href="/article2" class="btn" name="readMore" value="article2">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/images/thirdcover.jpg" alt="The Top 10 Greatest Books">
+          <div class="card-body">
+            <h4 class="card-title">
+              The Top 10 Greatest Books Of All Time
+            </h4>
+            <p class="card-text">
+              Here are the top 10 of the greatest books that's been written of all the time:
+              <ul>
+                <li>Anne Keranina, by Leo Tolstoy.</li>
+                <li>The Great Gatsby, by F. Scott Fitzgerald.</li>
+                <li>Moby dick, by Herman Melville...</li>
+              </ul>
+            </p>
+            <a href="/article3" class="btn" name="readMore" value="article3">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/images/fourcover.png" alt="The Best Self-Improvement Books">
+          <div class="card-body">
+            <h4 class="card-title">
+              The Best Self-Improvement Books
+            </h4>
+            <p class="card-text">
+              Check out these self-improvement book we chose for you:
+              <ul>
+                <li>The 7 Habits of Highly Effective People, Stephen R. Covey.</li>
+                <li>The Power of Now, Eckhart Tolle.</li>
+                <li>You Are a Badass, Jen Sincero...</li>
+              </ul>
+            </p>
+            <a href="/article4" class="btn" name="readMore" value="article4">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/images/fifthcover.jpg" alt="The 10 Best Non-Fiction Books in 2021">
+          <div class="card-body">
+            <h4 class="card-title">
+              The 10 Best Non-Fiction Books in 2021 
+            </h4>
+            <p class="card-text">
+
+              <ul>
+                <li>Let Me Tell You What I mean, Joan Didion.</li>
+                <li>How To Avoid Climate Disaster, Bill Gates.</li>
+                <li>Four Hundred Souls, Ibram X. Kendi, Keisha N. Blain...</li>
+              </ul>
+            </p>
+            <a href="/article5" class="btn" name="readMore" value="article5">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 portfolio-item">
+        <div class="card h-100">
+          <img class="card-img-top" src="static/images/sixthcover.jpg" alt="The Must-Reads YA of All Time">
+          <div class="card-body">
+            <h4 class="card-title">
+              The Must-Reads YA of All Time
+            </h4>
+            <p class="card-text">
+              Here are the top 10 of the Must-Reads young adult books of all the time:
+              <ul>
+                <li>The book Thief, by Markus Zusak.</li>
+                <li>The Hate U Give, by Angie Thomas.</li>
+                <li>The Perks Of Being a Wallflower, by Stephen Chbosky...</li>
+              </ul>
+            </p>
+            <a href="/article6" class="btn" name="readMore" value="article6">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+    
+
+    <!-- Features Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        <img height="200" width="1110">
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Call to Action Section -->
+    <div class="row mb-4">
+      <div class="col-md-8" style="margin-left: 200px;">
+        <a class="btn btn-lg btn-block" href="#">Register to LeeBook</a>
+      </div>
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+{% endblock %}
